@@ -18,14 +18,19 @@ fun main(args : Array<String>){
         println("Contador -> $contador\n")
         contador--
     }
+ 
     do {
-        var num_random = (0..100).random()
-        println("Numero Aleatorio::$num_random")
-    } while(num_random > 50)
-    val list_frutas = listOf("pera", "manazana", "durazno")
-    for (fruta in list_frutas){
+        var numRandom = (0..100).random()
+        println("Numero Aleatorio::$numRandom")
+    } while(numRandom > 50)
+
+    val listFrutas = listOf("pera", "manazana", "durazno")
+    for (fruta in listFrutas){
         println("Frutero :: ${fruta.toUpperCase()}")
     }
+
+    listFrutas.forEach(fruta -> print("Validando fruta: $fruta"))
+
     for (iterator in 0 until 20){
         println("Iteracion:: $iterator")
     }

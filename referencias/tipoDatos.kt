@@ -1,5 +1,5 @@
 /*
-@author: Angel Gerardo Molina Valdez
+== Variables ==
 Las variables son valores que reservan espacio en la memoria
 y esto nos permite utilizar ese valor almacenado posteriormente
 utlizando una palabra literal como un identificador del mismo
@@ -24,22 +24,43 @@ Ejemplo:
 
 Por ultimo agregar que el convention naming para variables es camel case (myVar, nameUser, destroyWorld, etc)
 
+== Tipos de datos ==
+Los datos mas comunes en kotlin son los siguientes:
+- Numbers and their unsigned counterparts: Numeros enteros y decimales
+- Booleans: valores logicos true o false
+- Characters: caracteres
+- Strings: listas de caracteres
+- Arrays: colecciones de datos
+
 Para mas informacion sobre tipos de datos consultar:
 - https://kotlinlang.org/docs/basic-types.html
+- https://kotlinlang.org/docs/collections-overview.html#list
 
 Acerca de la interpolacion o string templates (formato a los strings) consultar documentacion:
 - https://kotlinlang.org/docs/strings.html#string-templates
+
+Sobre naming convention de Kotlin:
+- https://kotlinlang.org/docs/coding-conventions.html
 */
 fun main(args : Array<String>) {
+    // == Ejemplo variables ==
     var edadUsuario : Int = 20
     edadUsuario = 22
-    println("La edad que tengo es de: $edadUsuario anios\n")
-    val planetaUsuario : String = "Tierra"
-    println("Vivo en el planeta: $planetaUsuario \n")
-    val inicialUsuario : Char = 'A'
-    println("La inicial de mi nombre es $inicialUsuario\n")
     val nombreUsuario : String = "Angel Gerardo"
     val apellidosUsuario : String = "Molina Valdez"
     val nombreCompleto = "$nombreUsuario $apellidosUsuario"
-    println("Nombre completo:\t\t$nombreCompleto")
+
+    // == Tipos de datos ==
+    val tipoNumericoEntero : Int = 23
+    val tipoNumericoDecimal : Float = 23.3f
+    val tipoLogicoVerdadero : Boolean = true
+    val tipoLogicoFalso : Boolean = false
+    val primerInicial : Char = 'A'
+    val estadoNacimiento : String = "Estado de Mexico"
+    // [4, 4, 4, 4]
+    val calificaciones : Array<Int> = arrayOf(1, 2, 3, 4)
+    val frutas : List<String> = listOf("Pera", "Manzana", "Banana")
+    val edades : Map<String, Int> = mapOf("Angel Molina" to 23, "Pedro Picapiedra" to 56)
+
+    var valorNull = null
 }
